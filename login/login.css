@@ -1,0 +1,176 @@
+
+body {
+	margin: 0;
+	font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+	background: #000000;
+}
+
+.forms-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header {
+    height: auto;
+    background: -webkit-linear-gradient(225deg, #ff5ea7 50.04%, #010fcb 88.83%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 60px;
+    line-height: 76px;
+    text-align: center;
+}
+
+.forms {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 30px;
+}
+
+
+
+.form-wrapper.is-active {
+	animation: showLayer .3s ease-in forwards;
+}
+
+
+@keyframes showLayer {
+	50% {
+		z-index: 1;
+	}
+	100% {
+		z-index: 1;
+	}
+}
+
+
+.switcher {
+	background-color: transparent;
+}
+
+.form-wrapper.is-active .switcher-login {
+	color: #fff;
+	transform: translateX(90px);
+    font-size: larger;
+}
+
+
+.underline {
+	position: absolute;
+	bottom: -5px;
+	width: 100%;
+	height: 3px;
+	background-color: currentColor;
+    content: '';
+}
+
+
+.form {
+	overflow: hidden;
+	min-width: 350px;
+    height: 400px;
+	margin-top: 50px;
+	padding: 30px 50px;
+  border-radius: 5px;
+	transform-origin: top;
+}
+
+
+.form-wrapper.is-active .form-login {
+	animation: showLogin .3s ease-in forwards;
+}
+
+
+
+@keyframes showLogin {
+	0% {
+		background: #9f86e0;
+		transform: translate(60%, 6px);
+	}
+	50% {
+		transform: translate(0, 0);
+	}
+	100% {
+		background-color: #fff;
+		transform: translate(20%, -20px);
+	}
+}
+
+
+.back {
+	animation: back .3s ease-out forwards;
+}
+
+
+@keyframes back {
+	0% {
+		background-color: #fff;
+		transform: translate(-35%, -20px) scaleY(1);
+	}
+	50% {
+		transform: translate(0, 0) scaleY(.8);
+	}
+	100% {
+		background: #d7e7f1;
+		transform: translate(-40%, 10px) scaleY(.8);
+	}
+}
+
+
+.form fieldset {
+	position: relative;
+	border: 0;
+}
+
+
+
+.input-block {
+	margin-bottom: 50px;
+    width: 95%;
+}
+
+.input-block label {
+	font-size: 30px;
+   color: #3018b5;
+}
+
+.input-block input {
+	display: block;
+	width: 100%;
+	font-size: 16px;
+	line-height: 50px;
+	color: #0f1b45;
+  background: #e3eaed;
+  border: 1px solid #cddbef;
+  border-radius: 2px;
+}
+
+.form [type='submit'] {
+	opacity: 0;
+	display: block;
+	min-width: 120px;
+	margin: 30px auto 10px;
+	font-size: 25px;
+	line-height: 40px;
+	border-radius: 25px;
+	border: none;
+	transition: all .3s ease-out;
+    transform: translateX(0);
+
+
+}
+
+.form-wrapper.is-active .form [type='submit'] {
+	opacity: 1;
+	transform: translateX(0);
+	transition: all .4s ease-in;
+}
+
+.btn-login {
+	color: #e8eef3;
+	background: #9154d7;
+	transform: translateX(-30%);
+}

@@ -1,0 +1,39 @@
+.body{
+    display: flex;
+}
+body{
+    background-image: url(b.png);
+}
+footer{
+    background-color: rgb(61, 139, 8);
+}
+.card{
+    margin-left: 20px;
+    border: none;
+    margin-top: 10px;
+    width: 288px;
+    height:400px;
+    transition: width 1s, height 1s;
+    overflow: hidden;
+}
+.card-img-top{
+    height:200px;
+}
+nav{
+    height: 50px;
+    font-weight: 1000;
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+
+}
+.card-body{
+    background-image: linear-gradient(to top right,rgb(9, 10, 9),rgb(126, 6, 173)) ;
+    color: white;
+    height: 200px;
+}
+.card:hover{
+    width: 350px;
+    height: 450px;
+    font-size: 20px;
+    overflow: hidden;
+}
